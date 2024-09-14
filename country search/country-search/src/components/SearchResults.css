@@ -1,0 +1,66 @@
+.search-container { 
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.search-bar .search-icon {
+  margin: 0 10px;
+  color: #aaa;
+}
+
+.search-results {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
+  width: 100%; /* Make sure the results list matches the search bar width */
+  position: absolute;
+  top: 100%; /* Position below the search bar */
+  left: 0;
+  background: white; /* Ensure background is white for readability */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-result-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.result-icon {
+  margin-right: 10px;
+  color: #666;
+}
